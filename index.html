@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File Chunking Example</title>
+
+  <!-- CSS styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>File Chunking Example</h1>
+
+    <!-- File upload form -->
+    <form id="upload-form">
+      <div id="file-upload-container">
+        <label for="file-upload" class="file-upload-label">
+          Select File
+        </label>
+        <small id="file-name">-/-</small>
+        <input id="file-upload" type="file" />
+      </div>
+      <div id="file-metadata">
+        <h5>&#128209; File metadata</h5>
+        <p><strong>Size:</strong> <span id="file-size">-/-</span></p>
+        <p><strong>Hash:</strong> <span id="file-hash">-/-</span></p>
+      </div>
+      <button type="submit">&#8679; Upload</button>
+    </form>
+
+    <!-- Progress bar -->
+    <h5 style="text-align: start;">&#128200; Progress</h5>
+    <div id="progress-container"></div>
+    <p id="chunk-counter">
+      <span id="chunk">-</span> / <span id="total-chunks">-</span> chunks uploaded
+    </p>
+
+    <hr>
+
+    <!-- Log viewer -->
+    <div id="log-viewer">
+      <h5>&#128195; Log viewer</h5>
+      <div id="log-container"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

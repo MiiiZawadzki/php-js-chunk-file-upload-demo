@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #00bfff;
+  background: linear-gradient(90deg, rgba(0, 191, 255, 1) 0%, rgba(194, 255, 232, 1) 100%, rgba(255, 255, 255, 1) 99%);
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h5 {
+  margin: 0;
+  color: rgb(81, 81, 81);
+  padding: 0.5rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#file-upload-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#chunk-counter {
+  text-align: start;
+  font-size: small;
+}
+
+#file-metadata {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 100%;
+  text-align: start;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+#file-metadata>p {
+  font-size: small;
+  margin: 0;
+  padding: 0.5rem;
+  color: #606060;
+}
+
+#upload-form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-upload-label {
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 4%;
+  min-width: 75px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+#file-name {
+  margin-left: 0.5rem;
+  color: #333;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.file-upload-label:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+#progress-container {
+  display: flex;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.chunk-segment {
+  flex: 1;
+  background-color: transparent;
+  transition: background-color 0.1s ease-in-out;
+  border-right: 1px solid #fff;
+}
+
+.chunk-segment:last-child {
+  border-right: none;
+}
+
+.chunk-completed {
+  background-color: #ff6df8;
+}
+
+#log-container {
+  height: 100px;
+  overflow-y: auto;
+  padding-left: 1em;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #374151;
+  white-space: pre-wrap;
+}
+
+#log-viewer {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  text-align: start;
+}
+
+.log-message {
+  text-align: start;
+  font-size: smaller;
+}
